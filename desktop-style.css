@@ -1,0 +1,63 @@
+/* Header */
+.left-header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-menu{
+    display: flex;
+}
+
+.nav-menu-item:not(:last-child){
+    margin-right: 0.8rem;
+}
+
+.dropdown-menu{
+    top: 2rem;
+}
+
+.dropdown-menu.feature{
+    right: 0;
+    width: 8rem;
+}
+
+.dropdown-menu.company{
+    left: 0;
+    width: 7rem;
+}
+
+/* Hero */
+#hero{
+    display: flex;
+    max-height: 100vh;
+}
+
+.hero-image-container{
+    order: 2;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 6rem;
+} 
+
+.hero-image, .hero-content{
+    width: 100%;
+    max-width: 800px;
+    min-width: 500px;
+}
+
+.hero-content{
+    align-items: flex-start;
+    padding: 6rem 10vw;
+}
+
+
+.hero-title{
+    font-size: 4rem;
+}
+
+.hero-text{
+  max-width: 500px;  
+}
