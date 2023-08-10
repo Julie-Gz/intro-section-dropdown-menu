@@ -1,63 +1,84 @@
 /* Header */
-.left-header-container{
-    display: flex;
-    align-items: center;
+.header{
+    padding: 2rem 1.5rem;
+}
+
+.nav-menu-container{
     justify-content: space-between;
+    flex-grow: 3;
+    padding-left: 3rem ;
 }
 
-.nav-menu{
-    display: flex;
+.nav-menu .nav-menu-item:not(:last-child){
+    margin-right: 2.5rem;
 }
 
-.nav-menu-item:not(:last-child){
-    margin-right: 0.8rem;
+.dropdown-menu-item:not(:last-child){
+    margin-bottom: 0.8rem;
+}
+
+.dropdown-menu-item:first-of-type{
+    margin-top: 0.8rem;
+}
+
+.dropdown__item{
+    position: relative;
 }
 
 .dropdown-menu{
-    top: 2rem;
+    position: absolute;
+    background-color: white;
+    padding: 1rem;
+    margin-top: 0.9rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px var(--MediumGray);
+    z-index: 2;
 }
 
-.dropdown-menu.feature{
+.dropdown-menu#feature-dropdown{
     right: 0;
-    width: 8rem;
 }
 
-.dropdown-menu.company{
-    left: 0;
-    width: 7rem;
+.dropdown-menu#company-dropdown{
+    width: 150%;
 }
 
 /* Hero */
-#hero{
-    display: flex;
-    max-height: 100vh;
+.hero-content,.hero-image-container{
+    width: 50vw;
+    min-width: 400px;
 }
 
 .hero-image-container{
-    order: 2;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 6rem;
-} 
+    order: 2;  
+}
 
-.hero-image, .hero-content{
-    width: 100%;
-    max-width: 800px;
-    min-width: 500px;
+.hero-image{
+    margin: 0 auto;
 }
 
 .hero-content{
-    align-items: flex-start;
-    padding: 6rem 10vw;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    padding: 7rem 2rem 0 4rem;
 }
 
+.hero-content > *:not(:last-child){
+    margin-bottom: 2rem;
+}
 
 .hero-title{
-    font-size: 4rem;
+    font-size: max(5vw, 3.5rem);
 }
 
-.hero-text{
-  max-width: 500px;  
+.learn-more-btn{
+    margin-bottom: 4rem;
+}
+
+/* Media Query */
+@media only screen and (min-width: 1001px) and (max-width: 1100px){
+    .client-icon svg{
+        transform: scale(0.8);
+    }
 }

@@ -4,7 +4,7 @@
     --AlmostBlack: hsl(0, 0%, 8%);
 }
 
-*,::before, ::after{
+*,*::before, *::after{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -21,8 +21,13 @@ body{
     overflow-x: hidden;
 }
 
+main{
+    min-height: 100vh;
+}
+
 p{
     line-height: 1.2;
+    font-size: 18px;
 }
 
 a:link, a:visited{
@@ -33,176 +38,118 @@ li{
     list-style-type: none;
 }
 
-button{
+button, .learn-more-btn{
+    background-color: inherit;
     cursor: pointer;
 }
 
-/* Header */
-.header{
-    padding: 0.5rem 4vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+svg{
+    max-width: 100%;
 }
 
-/* .left-header-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
-
-.logo{
-    margin-right: 3rem;
-}
-
-/* .nav-menu{
-    display: flex;
-} */
-
-.nav-menu-item{
+button, img, svg, .learn-more-btn{
     display: block;
 }
 
-/* .nav-menu-item:not(:last-child){
-    margin-right: 0.8rem;
-} */
+.container__flex{
+    display: flex;
+    align-items: center;
+}
 
-.dropdown-btn{
+.dropdown__btn{
     border: none;
-    background-color: var(--AlmostWhite);
-    font-family: "Epilogue";
-}
-
-.dropdown-arrow{
-    margin-left: 0.3rem;
-}
-
-.dropdown__item{
-    position: relative;
+    font-family: "Epilogue", sans-serif;
 }
 
 .dropdown-menu{
-    position: absolute;
-    padding: 1.2rem;
-    border-radius: 10px;
-    padding: 1rem;
-    background-color: white;
-    box-shadow: 0 0 10px 1px var(--MediumGray);
+    display: none;
 }
 
-.dropdown-menu *:not(:last-child){
-    margin-bottom: 3px;
-}
-
-.dropdown-menu.feature .dropdown-menu-item .nav-icon{
-    margin-top: 10px;
-}
-
-.dropdown-menu.feature .dropdown-menu-item{
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.dropdown-menu.company .dropdown-menu-item{
-    margin-bottom: 0.5rem;
-}
-
-.dropdown-btn, .nav-link, p{
+.dropdown__btn span, .nav-link, p, .login-btn, .register-btn{
     color: var(--MediumGray);
 }
 
-.nav-link, .dropdown-btn{
+.dropdown-menu-item .nav-icon{
+    width: 18px;
+}
+
+.mobile__btn{
+    height: 2rem;
+    width: 2rem;
+    border: none;
+    outline: none;
+}
+
+.mobile__btn svg, .dropdown-menu-item .nav-icon svg{
+    margin: 0 auto;
+}
+
+.dropdown__btn span, .dropdown-menu-item .nav-icon{
+    margin-right: 5px;
+}
+
+.dropdown__btn span, .nav-link{
     font-size: 0.8rem;
     font-weight: normal;
 }
 
-/* Signup */
-.sign__btn{
-    width: 100px; 
-    padding: 0.7em 1.4em;
-    background-color: var(--AlmostWhite);
-}
-
-.sign__btn.login{
-    border: none;
-    color:var(--MediumGray);
-}
-
-.sign__btn.register{
-    border: 2px solid var(--MediumGray);
-    border-radius: 10px;
-}
-
-.sign__btn.login,.sign__btn.register{
-    transition: color 0.3s linear, font-weight 0.3s linear, border-color 0.3s linear ,transform 0.3s linear;
-}
-
-.sign__btn.login:hover, .sign__btn.register:hover,.nav-link:hover, .dropdown-btn:hover{
-    color: var(--AlmostBlack);
-    font-weight: 700;
-}
-
-.sign__btn.register:hover{
-    border-color: var(--AlmostBlack);
-}
-
-.sign__btn.login:active, .sign__btn.register:active{
-    transform: scale(0.9);
-}
-
-/* Hero */
-
-.hero-image{
-    height: 100%;
-    object-fit: contain;
-}
-
-.hero-content{
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.hero-content > *{
-    margin-top: 2.5rem;
-}
-
-.learn-more-btn{
-    display: block;
-    background-color: var(--AlmostBlack);
-    color: var(--AlmostWhite);
-    font-size: 1rem;
-    padding: 0.7em 1.4em; 
-    border-radius: 10px;
-    transition: color 0.3s linear, background-color 0.3s linear, transform 0.3s linear;
-}
-
-.clients{
+.dropdown-menu-item{
     display: flex;
     align-items: center;
 }
 
-.client-icon{
-    display: block;
+.sign__btn{
+    width: 5rem;
 }
 
-.client-icon:not(:last-child){
-    margin-right: 1.2rem;
+.btn__border{
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    outline: none;
+    font-family: "Epilogue", sans-serif;
 }
 
-.learn-more-btn:hover, .learn-more-btn:active{
-    background-color: var(--AlmostWhite);
-    color: var(--AlmostBlack);
+.login-btn{
+    border: none;
 }
 
-.learn-more-btn:active{
-    transform: scale(0.9);
+.register-btn{
+    border: 2px solid var(--MediumGray);
+}
+
+.learn-more-btn{
+    width: 9rem;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--AlmostBlack);
+    color: var(--AlmostWhite);
+    border: 2px solid var(--AlmostBlack);
+    text-align: center;
 }
 
 .hide{
     display: none;
+}
+
+/* Hover */
+.dropdown__btn:hover span, .dropdown-menu-item:hover, .nav-link:hover, .login-btn:hover, .register-btn:hover{
+    color: var(--AlmostBlack);
+    font-weight: 700;
+}
+.register-btn:hover{
+    border-color: var(--AlmostBlack);
+}
+
+.learn-more-btn:hover{
+    background-color: var(--AlmostWhite);
+    color: var(--AlmostBlack);
+}
+
+/* Hero */
+.clients{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* Attribution */
