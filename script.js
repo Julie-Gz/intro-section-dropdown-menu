@@ -56,7 +56,7 @@ function hamburgerMenu(e) {
 
 function dropdownMenu(dropdownBtn, dropdownMenu, dropdownArrow) {
     dropdownBtn.setAttribute('aria-expanded', dropdownBtn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
-    dropdownArrow.setAttribute("src", featureMenuArrow.getAttribute("src") === "https://julie-gz.github.io/hosted-images/icon-arrow-up.svg" ? "https://julie-gz.github.io/hosted-images/icon-arrow-down.svg" : "https://julie-gz.github.io/hosted-images/icon-arrow-up.svg");
+    dropdownArrow.setAttribute("src", featureMenuArrow.getAttribute("src") === "https://julie-gz.github.io/hosted-images/icon-arrow-down.svg" ? "https://julie-gz.github.io/hosted-images/icon-arrow-up.svg" : "https://julie-gz.github.io/hosted-images/icon-arrow-down.svg");
     dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
 }
 
